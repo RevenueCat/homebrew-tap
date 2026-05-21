@@ -1,28 +1,28 @@
 class Rc < Formula
   desc "RevenueCat command line interface"
   homepage "https://github.com/RevenueCat/revenuecat-cli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.0/rc_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ca5041110f1ced92e5e635b4a9d25ab116e1da0d4e620a39723a813700379078"
+      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_darwin_arm64.tar.gz"
+      sha256 "24e6ebd4f442b241bab692f5e830cc96a6c94e91986b9fdd8f0639c14546e39f"
     end
     on_intel do
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.0/rc_0.1.0_darwin_amd64.tar.gz"
-      sha256 "b9a868524e0592e62f392c8b7ea18cc50409bc34ed6560b2b1adf9a131ea0ca0"
+      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_darwin_amd64.tar.gz"
+      sha256 "a30a4a1377430c16559eb1e2080538492ddc0d51c61b81243dfb3c9794118bd0"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.0/rc_0.1.0_linux_arm64.tar.gz"
-      sha256 "afee9ae0e9baae9506e8c46d9c50ddb146f36c9ae2748daa57cbeb7ed1e06a36"
+      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_linux_arm64.tar.gz"
+      sha256 "1c4710d75c3eff09d8d312fd0eb405e7f471a1f821186205b63db0977a40983a"
     end
     on_intel do
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.0/rc_0.1.0_linux_amd64.tar.gz"
-      sha256 "d97102a1e5bdb745baa7a8a61d6078070fab1e9210e5a5fa8644ef270a44d711"
+      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_linux_amd64.tar.gz"
+      sha256 "659bad65e9fe1c415905275332a31ac40b8949d32dad116decf8ca308b1936e8"
     end
   end
 
