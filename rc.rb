@@ -5,46 +5,51 @@
 class Rc < Formula
   desc "RevenueCat command line interface"
   homepage "https://www.revenuecat.com"
-  version "0.1.1"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_darwin_amd64.tar.gz"
-      sha256 "a30a4a1377430c16559eb1e2080538492ddc0d51c61b81243dfb3c9794118bd0"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.0/rc_0.1.0_darwin_amd64.tar.gz"
+      sha256 "4726b867f42f886e2dfb5461013b6a2dbf95440017ca3f2edbb08f83e5611fbb"
 
       define_method(:install) do
         bin.install "rc"
+        bin.install_symlink "rc" => "revenuecat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_darwin_arm64.tar.gz"
-      sha256 "24e6ebd4f442b241bab692f5e830cc96a6c94e91986b9fdd8f0639c14546e39f"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.0/rc_0.1.0_darwin_arm64.tar.gz"
+      sha256 "109f0d7153c9da5c472c859604305a17ac321b3a251a48d0c38e41f50cd3f8f7"
 
       define_method(:install) do
         bin.install "rc"
+        bin.install_symlink "rc" => "revenuecat"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_linux_amd64.tar.gz"
-      sha256 "659bad65e9fe1c415905275332a31ac40b8949d32dad116decf8ca308b1936e8"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.0/rc_0.1.0_linux_amd64.tar.gz"
+      sha256 "e949adb907ae6acd499d2fbd01c2a1bfcc1fa039fe219c01908920a17cddc66c"
       define_method(:install) do
         bin.install "rc"
+        bin.install_symlink "rc" => "revenuecat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RevenueCat/revenuecat-cli/releases/download/v0.1.1/rc_0.1.1_linux_arm64.tar.gz"
-      sha256 "1c4710d75c3eff09d8d312fd0eb405e7f471a1f821186205b63db0977a40983a"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.0/rc_0.1.0_linux_arm64.tar.gz"
+      sha256 "17f372c554fde33d440d0f82698328383323296c55608ce977632087e4af16d5"
       define_method(:install) do
         bin.install "rc"
+        bin.install_symlink "rc" => "revenuecat"
       end
     end
   end
 
   test do
-    system "#{bin}/rc --version"
+    system "#{bin}/rc", "--version"
+    system "#{bin}/revenuecat", "--version"
   end
 end
