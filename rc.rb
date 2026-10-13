@@ -5,13 +5,13 @@
 class Rc < Formula
   desc "RevenueCat command line interface"
   homepage "https://www.revenuecat.com"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/RevenueCat/cli/releases/download/v0.1.4/rc_0.1.4_darwin_amd64.tar.gz"
-      sha256 "e7f52da81b831028eb8cf39942890040cbebef0e267d8b8753a2c48e2983ae66"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.5/rc_0.1.5_darwin_amd64.tar.gz"
+      sha256 "234dc2a72152a9a03c6f21c8d1845aac92ec495ec35b2acdcecf3d18220f170d"
 
       define_method(:install) do
         bin.install "rc"
@@ -19,8 +19,8 @@ class Rc < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/RevenueCat/cli/releases/download/v0.1.4/rc_0.1.4_darwin_arm64.tar.gz"
-      sha256 "cf6024190bb75e783a480e43afe2e1f1111257c57c6e863bfd21b87224729cfa"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.5/rc_0.1.5_darwin_arm64.tar.gz"
+      sha256 "0c6e3f28b32e298bc2c9822db71e6dbea8f35998630bb54007f5027899b92f1b"
 
       define_method(:install) do
         bin.install "rc"
@@ -31,16 +31,16 @@ class Rc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RevenueCat/cli/releases/download/v0.1.4/rc_0.1.4_linux_amd64.tar.gz"
-      sha256 "42d3f9384a7a8d68af73eaa0132661e1e99bd994e71707656329e74321affacb"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.5/rc_0.1.5_linux_amd64.tar.gz"
+      sha256 "9a75000da07f0c4110581ead3b59aae8483959849ec990217039b22065d20a4b"
       define_method(:install) do
         bin.install "rc"
         bin.install_symlink "rc" => "revenuecat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/RevenueCat/cli/releases/download/v0.1.4/rc_0.1.4_linux_arm64.tar.gz"
-      sha256 "b138d706083dbe0d6ab1d3d8f3bdc8d04967b67580deb542b58d40f2644dfcbf"
+      url "https://github.com/RevenueCat/cli/releases/download/v0.1.5/rc_0.1.5_linux_arm64.tar.gz"
+      sha256 "5b3a11ea249532d274f6eef6eb4fa51b53c117a69f0c2c0f72f4861895d93c77"
       define_method(:install) do
         bin.install "rc"
         bin.install_symlink "rc" => "revenuecat"
